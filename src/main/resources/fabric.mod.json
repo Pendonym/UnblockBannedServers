@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "unblockbannedservers",
+  "version": "${version}",
+  "name": "UnblockBannedServers",
+  "description": "The Minecraft mod required to play on Nomad Anarchy.",
+  "authors": [
+    "6b6t",
+    "Nomad Anarchy"
+  ],
+  "contact": {
+    "homepage": "https://nomadanarchy.online/",
+    "issues": "https://nomadanarchy.online/discord"
+  },
+  "license": "WTFPL",
+  "icon": "assets/unblockbannedservers/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "online.nomadanarchy.unblockbannedservers.UnblockBannedServers"
+    ]
+  },
+  "mixins": [
+    "unblockbannedservers.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://nomadanarchy.online/discord"
+      }
+    }
+  },
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}"
+  }
+}
