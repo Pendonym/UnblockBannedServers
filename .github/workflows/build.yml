@@ -18,6 +18,9 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v6
 
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
       - run: ./gradlew chiseledBuild
 
       - uses: actions/upload-artifact@v7
